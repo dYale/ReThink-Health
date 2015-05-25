@@ -1,3 +1,3 @@
-var pixelize = function(number) {
+function pixelize(number) {
   return number + 'px';
-}
+};
