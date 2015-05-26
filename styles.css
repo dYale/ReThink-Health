@@ -10,10 +10,21 @@ body {
   border-radius: 25px;
 }
 
+h1{
+  margin-left:5%;
+  font-size: 40px;
+}
+
+.logo{
+  float: right;
+  margin-right:5%;
+}
+
 
 .container{
   width: 90%;
   height: 90%;
+  margin-left:5%;
 }
 
 .outer{
@@ -21,3 +32,42 @@ body {
   height: 100%;
   background: blue;
 }
+
+.box{
+  fill: rgb(7,172,168);
+}
+
+.active{
+  fill: #009966;
+}
+
+.notActive{
+  fill: rgb(231,92,35)
+}
+
+.refresh{
+    background-size: 20px;
+    margin-left: 6.6%;
+}
+
+.rotate {
+  float: left;
+  position: absolute;
+  top: 350px;
+  left: -100px;
+  font-weight: bold;
+  font-size: 22px;
+-webkit-transform: rotate(-90deg);
+-moz-transform: rotate(-90deg);
+-ms-transform: rotate(-90deg);
+-o-transform: rotate(-90deg);
+transform: rotate(-90.0deg);
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+}
+
+h2{
+  margin-top: 0;
+  text-align: center;
+}
+
