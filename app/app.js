@@ -54,7 +54,15 @@ var rectangleData = [
 
 var lineData= [
   { "x1": 22, "x2": 22, "y1": containerSettings.h, "y2": 25},
-  { "x1": 22, "x2": parseInt(containerSettings.w-22), "y1": parseInt(containerSettings.h)-10, "y2": parseInt(containerSettings.h)-10}];
+  { "x1": 22, "x2": parseInt(containerSettings.w-22), "y1": parseInt(containerSettings.h)-10, "y2": parseInt(containerSettings.h)-10}]
+ 
+
+
+
+
+
+
+
 
 
 var lineGraph = svgContainer.selectAll("line")
@@ -73,6 +81,15 @@ var myLine = lineGraph
 
 
 myLine.style("stroke-width", 24)
+
+  var rectangle1 = svgContainer
+ 		.append("line")
+ 		.attr('x1',22)
+ 		.attr('y1',parseInt(containerSettings.h)-10)
+ 		.attr('x2',parseInt(containerSettings.w))
+ 		.attr('y2',0)
+ 		.style('stroke','black')
+ 		.style('opacity', 0.8)
 
 //create tringles for x and y axis
 
@@ -93,44 +110,39 @@ myLine.style("stroke-width", 24)
 
 //add squares for text
 
-	var rectangleTextData = [
-  { "x": 22, "y": 0, "height": containerSettings.h, "width": containerSettings.w, "color" : "grey" },
-  { "rx": containerSettings.w/20 + 21, "ry": 0, "height": containerSettings.h-50, "width": containerSettings.w, "color" : "#dcdcdc" },
-  { "rx": containerSettings.w/20 * 2 + 21, "ry": 0, "height": containerSettings.h-50, "width": containerSettings.w, "color" : "blue" },
-  { "rx": containerSettings.w/20 * 3 + 21, "ry": 0, "height": containerSettings.h-50, "width": containerSettings.w, "color" : "#dcdcdc" },
-  { "rx": containerSettings.w/20 * 4 + 21, "ry": 0, "height": containerSettings.h-50, "width": containerSettings.w, "color" : "grey" }];
+	
 
   var rectangle1 = svgContainer
  		.append("rect")
  		.attr('x',(parseInt(containerSettings.w)/6.75))
- 		.attr('y',(parseInt(containerSettings.h)/1.75))
- 		.style('fill','white')
- 		.attr('height', (parseInt(containerSettings.h)/5))
+ 		.attr('y',(parseInt(containerSettings.h)/1.410))
+ 		.style('opacity', .8)
+ 		.attr('height', (parseInt(containerSettings.h)/6.91))
  		.attr('width', (parseInt(containerSettings.w)/7))
 
-//  var rectangle2 = svgContainer
-//  		.append("rect")
-//  		.attr('x',(parseInt(containerSettings.w)/2.25))
-//  		.attr('y',(parseInt(containerSettings.h)/5))
-//  		.style('fill','white')
-//  		.attr('height', (parseInt(containerSettings.h)/3))
-//  		.attr('width', (parseInt(containerSettings.w)/7))
+ var rectangle2 = svgContainer
+ 		.append("rect")
+ 		.attr('x',(parseInt(containerSettings.w)/2.9))
+ 		.attr('y',(parseInt(containerSettings.h)/1.95))
+ 		.style('opacity', .8)
+ 		.attr('height', (parseInt(containerSettings.h)/6.91))
+ 		.attr('width', (parseInt(containerSettings.w)/7))
 
-// var rectangle3 = svgContainer
-// 	.append("rect")
-// 	.attr('x',(parseInt(containerSettings.w)/2.25))
-// 	.attr('y',(parseInt(containerSettings.h)/5))
-// 	.style('fill','white')
-// 	.attr('height', (parseInt(containerSettings.h)/5))
-// 	.attr('width', (parseInt(containerSettings.w)/7))
+var rectangle3 = svgContainer
+	.append("rect")
+	.attr('x',(parseInt(containerSettings.w)/1.83))
+	.attr('y',(parseInt(containerSettings.h)/3.21))
+	.style('opacity', .8)
+	.attr('height', (parseInt(containerSettings.h)/6.91))
+	.attr('width', (parseInt(containerSettings.w)/7))
 
-// var rectangle4 = svgContainer
-// 	.append("rect")
-// 	.attr('x',(parseInt(containerSettings.w)/2.25))
-// 	.attr('y',(parseInt(containerSettings.h)/5))
-// 	.style('fill','white')
-// 	.attr('height', (parseInt(containerSettings.h)/5))
-// 	.attr('width', (parseInt(containerSettings.w)/7))
+var rectangle4 = svgContainer
+	.append("rect")
+	.attr('x',(parseInt(containerSettings.w)/1.35))
+	.attr('y',(parseInt(containerSettings.h)/8.53))
+	.style('opacity', .8)
+	.attr('height', (parseInt(containerSettings.h)/6.91))
+	.attr('width', (parseInt(containerSettings.w)/7))
 
 // var rectangle5 = svgContainer
 // 	.append("rect")
