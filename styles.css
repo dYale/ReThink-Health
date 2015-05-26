@@ -37,12 +37,13 @@ h1{
   fill: rgb(7,172,168);
 }
 
-.active{
+/*.active{
   fill: #009966;
 }
-
+*/
 .notActive{
   fill: rgb(231,92,35)
+  
 }
 
 .refresh{
