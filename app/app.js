@@ -4,8 +4,6 @@
 var containerSettings = {
   w: window.innerWidth,
   h: window.innerHeight,
-  r: 25,
-  n: 30,
 };
 
 
@@ -29,11 +27,11 @@ var rectGroup = container.append("g")
 
 //define rect sizes
 var rectangleData = [
-  { "rx": 22, "ry": 0, "height": containerSettings.h, "width": containerSettings.w, "color" : "grey" },
-  { "rx": containerSettings.w/5 + 21, "ry": 0, "height": containerSettings.h, "width": containerSettings.w, "color" : "#dcdcdc" },
-  { "rx": containerSettings.w/5 * 2 + 21, "ry": 0, "height": containerSettings.h, "width": containerSettings.w, "color" : "grey" },
-  { "rx": containerSettings.w/5 * 3 + 21, "ry": 0, "height": containerSettings.h, "width": containerSettings.w, "color" : "#dcdcdc" },
-  { "rx": containerSettings.w/5 * 4 + 21, "ry": 0, "height": containerSettings.h, "width": containerSettings.w, "color" : "grey" }];
+  { "rx": 21, "ry": -21, "height": containerSettings.h, "width": containerSettings.w, "color" : "grey" },
+  { "rx": containerSettings.w/5 + 21, "ry": -21, "height": containerSettings.h, "width": containerSettings.w, "color" : "#dcdcdc" },
+  { "rx": containerSettings.w/5 * 2 + 21, "ry": -21, "height": containerSettings.h, "width": containerSettings.w, "color" : "grey" },
+  { "rx": containerSettings.w/5 * 3 + 21, "ry": -21, "height": containerSettings.h, "width": containerSettings.w, "color" : "#dcdcdc" },
+  { "rx": containerSettings.w/5 * 4 + 21, "ry": -21, "height": containerSettings.h, "width": containerSettings.w, "color" : "grey" }];
 
 
   var rectangles = svgContainer.selectAll("rect")
@@ -53,8 +51,8 @@ var rectangleData = [
 //create lines for x and y axis
 
 var lineData= [
-  { "x1": 22, "x2": 22, "y1": containerSettings.h, "y2": 25},
-  { "x1": 22, "x2": parseInt(containerSettings.w-22), "y1": parseInt(containerSettings.h)-10, "y2": parseInt(containerSettings.h)-10}]
+  { "x1": 22, "x2": 22, "y1": containerSettings.h-10, "y2": 25},
+  { "x1": 22, "x2": parseInt(containerSettings.w-22), "y1": parseInt(containerSettings.h)-22, "y2": parseInt(containerSettings.h)-22}]
  
 
 
@@ -82,10 +80,12 @@ var myLine = lineGraph
 
 myLine.style("stroke-width", 24)
 
-  var rectangle1 = svgContainer
+
+//temporary line across central axis
+  var horizontalLine = svgContainer
  		.append("line")
  		.attr('x1',22)
- 		.attr('y1',parseInt(containerSettings.h)-10)
+ 		.attr('y1',parseInt(containerSettings.h)-27.51)
  		.attr('x2',parseInt(containerSettings.w))
  		.attr('y2',0)
  		.style('stroke','black')
@@ -98,12 +98,12 @@ myLine.style("stroke-width", 24)
     var horTriangle = svgContainer.append('polygon')
     			.style('stroke', 'black')
     			.style('fill', 'black')
-    			.attr('points',"22,0, 5,30, 40,30")
+    			.attr('points',"21,0, 4,30, 40,30")
 
     var vertTriangle = svgContainer.append('polygon')
     			.style('stroke', 'black')
     			.style('fill', 'black')
-    			.attr('points' , (parseInt(containerSettings.w)) + "," + (parseInt(containerSettings.h-10)) + "," + (parseInt(containerSettings.w)-30) + "," + (parseInt(containerSettings.h+10)) +"," + (parseInt(containerSettings.w-30)) + "," + (parseInt(containerSettings.h)-35))
+    			.attr('points' , (parseInt(containerSettings.w)) + "," + (parseInt(containerSettings.h-21)) + "," + (parseInt(containerSettings.w)-30) + "," + (parseInt(containerSettings.h-4)) +"," + (parseInt(containerSettings.w-30)) + "," + (parseInt(containerSettings.h)-40))
 
 
 
@@ -115,7 +115,7 @@ myLine.style("stroke-width", 24)
   var rectangle1 = svgContainer
  		.append("rect")
  		.attr('x',(parseInt(containerSettings.w)/6.75))
- 		.attr('y',(parseInt(containerSettings.h)/1.410))
+ 		.attr('y',(parseInt(containerSettings.h)/1.44451))
  		.style('opacity', .8)
  		.attr('height', (parseInt(containerSettings.h)/6.91))
  		.attr('width', (parseInt(containerSettings.w)/7))
@@ -123,7 +123,7 @@ myLine.style("stroke-width", 24)
  var rectangle2 = svgContainer
  		.append("rect")
  		.attr('x',(parseInt(containerSettings.w)/2.9))
- 		.attr('y',(parseInt(containerSettings.h)/1.95))
+ 		.attr('y',(parseInt(containerSettings.h)/1.92))
  		.style('opacity', .8)
  		.attr('height', (parseInt(containerSettings.h)/6.91))
  		.attr('width', (parseInt(containerSettings.w)/7))
