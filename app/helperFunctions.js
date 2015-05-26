@@ -14,40 +14,28 @@ var textAdjust = function(num){
 
 
 //START HERE AND FIX THIS TOMORROW DO ANIMATIONS!
-var hover = function(){
-	var that = this;
-			console.log(this)
-	d3.selectAll('.column').each(function(d,i){
-		if(that === this){
-		} else {
-			console.log('found')
- 		d3.select(this)
- 		.append('text')
- 		.attr('x',d.rx+50)
- 		.attr('y',d.ry+80)
- 		.transition().duration(1000)
- 	}
-})
-}
+
 
 var boxHover = function(){
 	var that = this;
+	if(this.tagName === 'P'){
+		console.log(this.parentNode.parentNode.children[0])
+		that = this.parentNode.parentNode.children[0]
+	}
 
-
-	if(!this.formerX && !this.formerY){
+	if(!that.formerX && !that.formerY){
 	d3.selectAll('.box').each(function(d,i){
 		this.formerX = this.x.animVal.value;
 		this.formerY = this.y.animVal.value;
+
 		})
 }
 
-
+	console.log(this,that)
 	d3.selectAll('.box').each(function(d,i){
 
 
-
-		console.log(this)
-
+		 	console.log(this,that)
 		 if(that === this){
 			d3.select(this)
 		 		.classed('active', true)

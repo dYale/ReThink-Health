@@ -76,7 +76,6 @@ var nameArray = ['Campaign','Engage','Align','Redesign','Integrate']
  			.text(nameArray[i])
  			.style('font-size', pixelize(textAdjust(28)))
  			.style('font-weight', 'bold' )
- 			.on("mousemove", hover)
  	})
 
 
@@ -222,6 +221,8 @@ d3.selectAll('.boxG1').each(function(d,i){
  			.append('xhtml:p')
    			.text('Learn from joint accomplishments and use lessons to springsboard the effort to ongoing collaboration.')
    			.style('text-align','center')
+   			.on("click", boxHover)
+   			
 
 
  	})
@@ -244,6 +245,7 @@ d3.selectAll('.boxG2').each(function(d,i){
  			.append('xhtml:p')
    			.text('Develop bolder vision with early examples and growing organizational capacity.')
    			.style('text-align','center')
+   			.on("click", boxHover)
 
  	})
 d3.selectAll('.boxG3').each(function(d,i){
@@ -265,6 +267,7 @@ d3.selectAll('.boxG3').each(function(d,i){
  			.append('xhtml:p')
    			.text('Focus on aspiration and link short-term action to long-term strategy.')
    			.style('text-align','center')
+   			.on("click", boxHover)
 
  	})
 d3.selectAll('.boxG4').each(function(d,i){
@@ -287,6 +290,8 @@ d3.selectAll('.boxG4').each(function(d,i){
  			.append('xhtml:p')
    			.text('Generate new support and energy through vision, innovation and success.')
    			.style('text-align','center')
+   			.on("click", boxHover)
+
  	})
 
    			
